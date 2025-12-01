@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantenimiento de Software</title>
+  <link rel="stylesheet" href="secundarias.css">
+</head>
+<body>
+
+<header>
+  <h1 class="titulo">Mantenimiento de Software</h1>
+  <nav>
+    <ul>
+      <li><a href="principal.html">Inicio</a></li>
+      <li><a href="hardware.html">Hardware</a></li>
+      <li><a href="software.html">Software</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="intro">
+  <div class="intro-texto">
+    <p><em>
+      El <strong>software</strong> es el conjunto de programas y sistemas que hacen que su computadora funciones, Con el tiempo el sistema operativos y las aplicaciones pueden volverse lentos, presentar errores o dejar de funcionar correctamente si no reciben el mantenimiento adecuado.
+    </em></p>
+    <p><em>
+     Mantener el software actualizado, limpio y protegido es tan importante como cuidar el hardware. Realizar tareas como eliminar archivos innecesarios, actualizar controladores, proteger el equipo contra virus o hacer copias de seguridad garantiza un uso mas seguro, eficaz y duradero.
+    </em></p>
+    <p><em>
+     En esta seccion vas a encontrar informacion detallada sobre los principales aspectos del mantenimiento de software, dividido por temas especificos.
+     Cada uno incluye una descripcion, pasos basicos, imagenes ilustrativas y consejos utiles para resolver problemas comunes y mejorar el rendimiento general del sistema.
+    </em></p>
+  </div>
+  <div class="intro-imagen">
+    <img src="imagenes/introduccionS.jpg" alt="Componentes de hardware en mantenimiento">
+  </div>
+</section>
+
+<section id="optimizacion-barra" class="barra-tema software" onclick="toggleBarra('optimizacion-barra')">
+  <div class="overlay">
+    <h2><a href="software_optimizacion.html"><em>OPTIMIZACION DEL SISTEMA OPERATIVO</em></a></h2>
+    <p><em>
+      Eliminacion de archivos temporales, desinstalacion de programas innecesarios y configuracion de inicio para mejorar el rendimiento del sistema.
+    </em></p>
+  </div>
+</section>
+
+<section id="seguridad-barra" class="barra-tema software" onclick="toggleBarra('seguridad-barra')">
+  <div class="overlay">
+    <h2><a href="software_seguridad.html"><em>SEGURIDAD</em></a></h2>
+    <p><em>
+    Uso de antivirus y antimalware, actualizaciones del sistema, copias de seguridad y buenas prácticas para proteger los datos y el sistema.
+    </em></p>
+  </div>
+</section>
+
+<section id="problemas-barra" class="barra-tema software" onclick="toggleBarra('problemas-barra')">
+  <div class="overlay">
+    <h2><a href="software_problemas.html"><em>PROBLEMAS COMUNES</em></a></h2>
+    <p><em>
+          Solución de errores frecuentes: lentitud al iniciar, conflictos de controladores, incompatibilidades y bloqueos del sistema.
+    </em></p>
+  </div>
+</section>
+
+<section id="personalizacion-barra" class="barra-tema software" onclick="toggleBarra('personalizacion-barra')">
+  <div class="overlay">
+    <h2><a href="software_personalizacion.html"><em>MEJORAS Y PERSONALIZACION</em></a></h2>
+    <p><em>
+      Actualizar el sistema operativo, instalar software alternativo, ajustar accesibilidad, rendimiento y apariencia según tus preferencias.
+    </em></p>
+  </div>
+</section>
+
+<script>
+  function toggleBarra(id) {
+    const barra = document.getElementById(id);
+    document.querySelectorAll(".barra-tema").forEach(b => {
+      if (b !== barra) b.classList.remove("expanded");
+    });
+    barra.classList.toggle("expanded");
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantenimiento de Hardware</title>
+  <link rel="stylesheet" href="secundarias.css">
+</head>
+<body>
+
+<header>
+  <h1 class="titulo">Mantenimiento de Hardware</h1>
+  <nav>
+    <ul>
+      <li><a href="principal.html">Inicio</a></li>
+      <li><a href="hardware.html">Hardware</a></li>
+      <li><a href="software.html">Software</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="intro">
+  <div class="intro-texto">
+    <p><em>
+      El <strong>hardware</strong> de una computadora es todo aquello que podemos tocar: teclado, monitor, cables, memoria, disco, etc. Con el paso del tiempo, estos componentes se desgastan, acumulan polvo o dejan de funcionar correctamente. Un buen mantenimiento físico permite prolongar la vida útil del equipo, evitar fallas inesperadas y, en muchos casos, ahorrar dinero en reparaciones innecesarias.</em></p>
+    <p><em>
+      Cuidar el hardware no solo implica limpiar las piezas visibles, sino también revisar regularmente el estado interno del equipo. La acumulación de polvo, los problemas eléctricos o el uso continuo sin mantenimiento pueden causar sobrecalentamiento, pérdida de rendimiento o incluso daños permanentes en los componentes.
+    </em></p>
+    <p><em>
+      En esta sección vas a encontrar información práctica y detallada sobre las principales tareas de mantenimiento físico: limpieza de ventiladores y puertos, chequeo de componentes como la memoria RAM, discos o fuente de alimentación, y consejos sobre cómo reemplazar o actualizar piezas cuando sea necesario. Además, se incluyen recomendaciones de prevención para mantener tu computadora en óptimas condiciones a lo largo del tiempo.
+    </em></p>
+  </div>
+
+  <div class="intro-imagen">
+    <img src="imagenes/introduccionH.webp" alt="Componentes de hardware en mantenimiento">
+  </div>
+</section>
+
+<section id="limpieza-barra" class="barra-tema hardware" onclick="toggleBarra('limpieza-barra')">
+  <div class="overlay">
+    <h2><a href="hardware_limpieza.html"><em>LIMPIEZA FÍSICA DEL EQUIPO</em></a></h2>
+    <p><em>
+      Polvo en ventiladores, teclado o puertos. Cómo limpiar con aire comprimido, paños y alcohol isopropílico sin dañar las piezas internas.
+    </em></p>
+  </div>
+</section>
+
+<section id="chequeo-barra" class="barra-tema hardware" onclick="toggleBarra('chequeo-barra')">
+  <div class="overlay">
+    <h2><a href="hardware_componentes.html"><em>CHEQUEO DE COMPONENTES</em></a></h2>
+    <p><em>
+      Diagnóstico de memoria RAM, disco duro/SSD y fuente de alimentación. Qué herramientas usar y cómo interpretar los resultados.
+    </em></p>
+  </div>
+</section>
+
+<section id="perifericos-barra" class="barra-tema hardware" onclick="toggleBarra('perifericos-barra')">
+  <div class="overlay">
+    <h2><a href="hardware_perifericos.html"><em>PERIFÉRICOS</em></a></h2>
+    <p><em>
+      Revisión y limpieza de mouse, teclado y monitor. Detección de cables flojos y calibración básica de pantalla.
+    </em></p>
+  </div>
+</section>
+
+<section id="actualizacion-barra" class="barra-tema hardware" onclick="toggleBarra('actualizacion-barra')">
+  <div class="overlay">
+    <h2><a href="hardware_actualizacion.html"><em>ACTUALIZACIÓN / REEMPLAZO DE PIEZAS</em></a></h2>
+    <p><em>
+      Cuándo ampliar la RAM, cambiar disco por SSD o reemplazar batería. Consejos previos y pasos visuales.
+    </em></p>
+  </div>
+</section>
+
+<section id="prevencion-barra" class="barra-tema hardware" onclick="toggleBarra('prevencion-barra')">
+  <div class="overlay">
+    <h2><a href="hardware_prevencion.html"><em>PREVENCIÓN</em></a></h2>
+    <p><em>
+      Cómo evitar el sobrecalentamiento, usar estabilizadores y realizar limpiezas preventivas periódicas.
+    </em></p>
+  </div>
+</section>
+
+<script>
+function toggleBarra(id) {
+  const barra = document.getElementById(id);
+
+  document.querySelectorAll(".barra-tema").forEach(b => {
+    if (b !== barra) b.classList.remove("expanded");
+  });
+
+  barra.classList.toggle("expanded");
+}
+</script>
+
+</body>
+</html>
