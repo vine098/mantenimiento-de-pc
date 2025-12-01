@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento Basico de Computadoras</title>
+    <link rel="stylesheet" href="principal.css">
+</head>
+<body>
+
+<header>
+    <h1 class="titulo">Mantenimiento Basico de Computadoras</h1>
+    <nav>
+        <ul>
+            <li><a href="principal.html">Inicio</a></li>
+            <li><a href="hardware.html">Hardware</a></li>
+            <li><a href="software.html">Software</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="intro">
+  <div class="intro-texto">
+    <p><em>
+      Muchas personas enfrentan problemas con sus computadoras sin saber cómo resolverlos. Este sitio brinda información clara y útil sobre <strong>mantenimiento de software y hardware</strong>, con explicaciones, pasos y recomendaciones que te ayudarán en cada situación.
+    </em></p>
+    <p><em>
+      Nuestro objetivo es ofrecer una guía práctica y accesible para usuarios sin experiencia técnica, de manera que puedan mantener sus equipos en buen estado, prevenir fallas y resolver problemas comunes sin depender siempre de un servicio técnico. Cada tema está acompañado de descripciones simples, ejemplos e imágenes ilustrativas que facilitan la comprensión.
+    </em></p>
+    <p><em>
+      El contenido del sitio se divide en <strong>dos secciones principales</strong>:
+    </em></p>
+    <p><em>
+      — En la sección de <strong>Software</strong> se explican tareas esenciales para mejorar el funcionamiento del sistema operativo y los programas, como la optimización del rendimiento, la eliminación de archivos innecesarios, la protección contra virus o la actualización de controladores. El objetivo es que el usuario aprenda a mantener su computadora estable, rápida y segura.
+    </em></p>
+    <p><em>
+      — En la sección de <strong>Hardware</strong> se aborda el mantenimiento físico del equipo: limpieza de componentes, revisión de periféricos, detección de fallos y recomendaciones para reemplazar o mejorar piezas. Estos cuidados ayudan a prolongar la vida útil del dispositivo y prevenir averías o daños costosos.
+    </em></p>
+    <p><em>
+      De esta forma, el proyecto busca reunir en un solo lugar todo lo necesario para comprender, mantener y cuidar una computadora, tanto en su parte interna como externa.
+    </em></p>
+  </div>
+  <div class="intro-imagen">
+    <img src="imagenes/introduccion.jpg" alt="Computadora en mantenimiento">
+  </div>
+</section>
+
+
+<section id="software-barra" class="barra-tema software" onclick="toggleBarra('software-barra')">
+  <div class="overlay">
+    <h2><a href="software.html"><em>SOFTWARE</em></a></h2>
+    <p><em>Esta sección está dedicada al cuidado y mantenimiento del software de tu computadora. Aquí descubrirás cómo proteger tu equipo de virus y malware, optimizar el rendimiento del sistema, actualizar programas y drivers, y solucionar errore comunes. También encontrarás consejos prácticos y ejemplos de situaciones cotidianas para que puedas mantener tu computadora segura y funcionando de manera eficiente.</em></p>
+  </div>
+</section>
+
+
+<section id="hardware-barra" class="barra-tema hardware" onclick="toggleBarra('hardware-barra')">
+  <div class="overlay">
+    <h2><a href="hardware.html"><em>HARDWARE</em></a></h2>
+   <p><em>En esta sección aprenderás cómo mantener y cuidar las partes físicas de tu computadora. Desde la limpieza de ventiladores y teclados hasta la revisión de componentes como memoria, discos y fuente de alimentación. Aquí encontrarás consejos prácticos y recomendaciones para evitar fallas, prolongar la vida útil de tu equipo y solucionar problemas comunes de hardware.</em></p>
+  </div>
+</section>
+
+<script>
+function toggleBarra(id) {
+  const barra = document.getElementById(id);
+
+  document.querySelectorAll(".barra-tema").forEach(b => {
+    if (b !== barra) b.classList.remove("expanded");
+  });
+
+  barra.classList.toggle("expanded");
+}
+</script>
+
+</body>
+</html>
